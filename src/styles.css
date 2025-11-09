@@ -76,7 +76,7 @@ body {
 
   --bg: #efe6e6;
   --text: #0A1321;
-  --primary: #0f3650;
+  --primary: #24437c;
 }
 
 
@@ -152,19 +152,12 @@ body {
 }
 
 .page-header .photo .front {
-  background: url(./assets/Vagabond\(1\).jpeg) no-repeat center 20%/ cover;
+  background: url(./assets/Vagabond-colored-1.png) no-repeat center 20%/ cover;
   transform: rotateY(0deg);
 }
 
-.flip-toggle {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  opacity: 0;
-}
-
 .photo-wrapper:hover .photo,
-.photo-wrapper .flip-toggle:checked + .photo  {
+.photo-wrapper:active .photo {
   transform: rotateY(180deg);
 }
 
@@ -235,12 +228,7 @@ main h1,
   position: relative;
 }
 
-.card-wrapper {
-  position: relative;
-}
-
-.card-wrapper:hover .card,
-.flip-toggle:checked+.card {
+.card:hover {
   transform: scale(1.02);
 }
 
@@ -255,8 +243,7 @@ main h1,
   will-change: filter;
 }
 
-.card-wrapper:hover img,
-.flip-toggle:checked + .card img {
+.card:hover img {
   filter: grayscale(0);
 }
 
