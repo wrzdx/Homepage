@@ -156,7 +156,15 @@ body {
   transform: rotateY(0deg);
 }
 
-.photo-wrapper:hover .photo {
+.flip-toggle {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
+.photo-wrapper:hover .photo,
+.photo-wrapper .flip-toggle:checked + .photo  {
   transform: rotateY(180deg);
 }
 
@@ -227,7 +235,12 @@ main h1,
   position: relative;
 }
 
-.card:hover {
+.card-wrapper {
+  position: relative;
+}
+
+.card-wrapper:hover .card,
+.flip-toggle:checked+.card {
   transform: scale(1.02);
 }
 
@@ -242,7 +255,8 @@ main h1,
   will-change: filter;
 }
 
-.card:hover img {
+.card-wrapper:hover img,
+.flip-toggle:checked + .card img {
   filter: grayscale(0);
 }
 
