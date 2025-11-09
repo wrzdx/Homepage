@@ -136,14 +136,13 @@ body {
 }
 
 .page-header .photo .back {
-  background: url(./assets/Godjo-uncolored.jpeg) no-repeat center/ cover; 
+  background: url(./assets/Vagabond.jpeg) no-repeat center / cover; 
   transform: rotateY(-180deg);
 }
 
 .page-header .photo .front {
-  background: url(./assets/Godjo-colored.jpeg) no-repeat center/ cover;
+  background: url(./assets/Vagabond\(1\).jpeg) no-repeat center/ cover;
   transform: rotateY(0deg);
-  
 }
 
 .photo-wrapper:hover .photo {
@@ -156,6 +155,11 @@ body {
   text-align: center;
   color: var(--bg);
   font-size: 2.5rem;
+}
+
+.page-header .info .photo .front h1 {
+  top: 0;
+  color: var(--text);
 }
 
 .text-info-wrapper {
