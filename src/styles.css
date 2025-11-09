@@ -74,9 +74,9 @@ body {
   background-color: var(--bg);
   color: var(--text);
 
-  --bg: #F9EBE0;
+  --bg: #efe6e6;
   --text: #0A1321;
-  --primary: #0D212E;
+  --primary: #0f3650;
 }
 
 
@@ -87,7 +87,7 @@ body {
   inset: 0;
   z-index: -1;
   transform: skewY(var(--distortion)) translateY(var(--offset));
-  box-shadow: 0 -3px 10px 1px black;
+  box-shadow: 0 -3px 16px 4px black;
 
   --distortion: -9deg;
   --offset: calc(tan(var(--distortion)) * 100vw);
@@ -107,7 +107,7 @@ body {
   gap: 6vw;
   background-color: var(--bg);
   border-radius: 1rem;
-  box-shadow: 0 0 10px -3px black;
+  box-shadow: 0 0 16px -2px black;
 }
 
 .page-header .photo-wrapper {
@@ -128,7 +128,7 @@ body {
 
 .page-header .photo .back,
 .page-header .photo .front {
-  box-shadow: 0 0 5px -1px black;
+  box-shadow: 0 0 8px 0px black;
   border-radius: 1rem;
   position: absolute;
   height: 100%;
@@ -198,10 +198,11 @@ body {
 }
 
 main, .page-footer {
-  padding: 1rem 6rem;
+  padding: 1rem 8rem;
 }
 
-main h1 {
+main h1,
+.page-footer h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
@@ -213,7 +214,7 @@ main h1 {
 }
 
 .card {
-  box-shadow: 0 0 5px -2px black;
+  box-shadow: 0 0 16px -4px black;
   border-radius: 1rem;
   overflow: hidden;
   will-change: transform;
@@ -275,14 +276,32 @@ main h1 {
   display: grid;
   grid-template-columns: 1fr auto;
   color: var(--bg);
+  padding-block: 5rem;
+  gap: 2rem;
+  align-items: center;
 }
 
+.info a {
+  display: inline-block;
+  height: 100%;
+}
 
+.page-footer p {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
 
 .page-footer svg {
   fill: var(--bg);
 }
 
-.page-footer img {
-  height: 20rem;
+.page-footer a {
+  color: var(--bg);
 }
+
+.page-footer img {
+  border-radius: 1rem;
+  height: 38rem;
+  box-shadow: 0 0 16px 0 black;
+}
+
