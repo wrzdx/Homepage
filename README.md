@@ -16,13 +16,6 @@ A responsive portfolio homepage built to showcase my projects and demonstrate ad
 * Modular JavaScript with Webpack bundling
 * Smooth animations and hover effects
 
-## Key Skills Demonstrated
-
-✅ Responsive HTML/CSS layouts
-✅ CSS Grid and Flexbox techniques
-✅ GitHub API integration
-✅ JavaScript async/await and promises
-✅ Webpack configuration and modular code structure
 
 ## How to Run
 
