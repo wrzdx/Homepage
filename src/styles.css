@@ -234,6 +234,7 @@ main h1,
   aspect-ratio: 1;
   display: grid;
   grid-template-rows: 2fr 1fr;
+  max-height: 80vh;
 }
 
 .card:hover {
