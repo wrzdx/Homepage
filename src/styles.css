@@ -79,11 +79,9 @@ body {
     system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   background-color: var(--bg);
-  color: var(--text);
 
   --bg: #efe6e6;
-  --text: #0A1321;
-  --primary: #24437c;
+  --primary: #0f203b;
 }
 
 
@@ -233,6 +231,9 @@ main h1,
   will-change: transform;
   transition: ease-in-out 0.2s;
   position: relative;
+  aspect-ratio: 1;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
 }
 
 .card:hover {
@@ -241,13 +242,14 @@ main h1,
 
 .card img {
   filter: grayscale(1);
-  min-height: 20rem;
-  max-width: 100%;
+  width: 100%;
   object-fit: cover;
   object-position: center;
   border-bottom: 1px solid rgb(207, 207, 207);
   transition: ease-in-out 0.2s;
   will-change: filter;
+  min-height: 0;
+  height: 100%;
 }
 
 .card:hover img {
@@ -260,8 +262,10 @@ main h1,
     "name links"
     "desc desc";
   grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
   row-gap: 0.5rem;
   padding: 1.5rem;
+  min-height: 0;
 }
 .card .name {
   grid-area: name;
@@ -283,6 +287,10 @@ main h1,
 .card .description {
   grid-area: desc;
   font-size: 1.15rem;
+  overflow: hidden;
+  height: 100%;
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
 .page-footer {
@@ -360,6 +368,10 @@ main h1,
   .page-footer p {
     font-size: 1.5rem;
   }
+
+  .page-header .info .photo h1 {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 800px) {
@@ -426,6 +438,9 @@ main h1,
     justify-self: center;
     order: -1;
   }
+  .page-header .info .photo h1 {
+    font-size: 2.5rem;
+  }
 }
 
 @media (max-width: 500px) {
@@ -461,5 +476,11 @@ main h1,
 
   main, .page-footer {
     padding: 3rem 0.5rem;
+  }
+}
+
+@media (hover: none) {
+  .card img {
+    filter: none;
   }
 }
