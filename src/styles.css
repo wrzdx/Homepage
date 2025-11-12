@@ -208,7 +208,7 @@ body {
 }
 
 main, .page-footer {
-  padding: 4rem 8rem;
+  padding: 4rem;
 }
 
 main h1,
@@ -220,7 +220,7 @@ main h1,
 .cards {
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(25rem, 1fr) );
-  gap: 3.5rem;
+  gap: 3rem;
   margin-top: 2rem;
 }
 
@@ -231,7 +231,7 @@ main h1,
   will-change: transform;
   transition: ease-in-out 0.2s;
   position: relative;
-  aspect-ratio: 1;
+  aspect-ratio: 1.2;
   display: grid;
   grid-template-rows: 2fr 1fr;
   max-height: 80vh;
@@ -264,8 +264,8 @@ main h1,
     "desc desc";
   grid-template-columns: 1fr auto;
   grid-template-rows: auto 1fr;
-  row-gap: 0.5rem;
-  padding: 1.5rem;
+  row-gap: 0.4rem;
+  padding: 1.2rem 1.5rem 1.5rem;
   min-height: 0;
 }
 .card .name {
